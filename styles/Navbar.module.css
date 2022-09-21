@@ -1,0 +1,17 @@
+.menuContainer{
+    display: flex;
+    align-items: center;
+    width: 90%;
+   
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.title{
+    font-family: MontserratRegular;
+}

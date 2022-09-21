@@ -20,7 +20,57 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
   }
+}
+
+@font-face {
+  font-family: MontserratBlack;
+  src: url('../public/fonts/montserrat-font/MontserratBlack-3zOvZ.ttf');
+}
+
+@font-face {
+  font-family: MontserratBlackItalic;
+  src: url('../public/fonts/montserrat-font/MontserratBlackItalic-owBnV.ttf');
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url('../public/fonts/montserrat-font/MontserratBold-DOWZd.ttf');
+}
+
+@font-face {
+  font-family: MontserratBoldItalic;
+  src: url('../public/fonts/montserrat-font/MontserratBoldItalic-4B3w9.ttf');
+}
+
+@font-face {
+  font-family: MontserratItalic;
+  src: url('../public/fonts/montserrat-font/MontserratItalic-WyzEz.ttf');
+}
+
+@font-face {
+  font-family: MontserratLight;
+  src: url('../public/fonts/montserrat-font/MontserratLight-ywBvq.ttf');
+}
+
+@font-face {
+  font-family: MontserratLightItalic;
+  src: url('../public/fonts/montserrat-font/MontserratLightItalic-axBzx.ttf');
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url('../public/fonts/montserrat-font/MontserratMedium-nRxlJ.ttf');
+}
+
+@font-face {
+  font-family: MontserratMediumItalic;
+  src: url('../public/fonts/montserrat-font/MontserratMediumItalic-EaqM4.ttf');
+}
+
+@font-face {
+  font-family: MontserratRegular;
+  src: url('../public/fonts/montserrat-font/MontserratRegular-BWBEl.ttf');
 }

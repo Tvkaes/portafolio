@@ -1,0 +1,51 @@
+.wave{
+    backdrop-filter: blur(2px);
+    height: 100%;
+    z-index: -1;
+}
+
+.title{
+   
+    position: absolute;
+    font-family: MontserratBold;
+    opacity: .6;
+    background: -webkit-linear-gradient(#d4af37, #F00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+
+.upSubtitle{
+   
+    position: absolute;
+    font-family: MontserratBold;
+    opacity: .6;
+    background: -webkit-linear-gradient(#d4af37, #F00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+
+}
+
+.containerTitle{
+    height: 25vh;
+    position: absolute;
+    width: 55vh;
+    z-index: 1;
+    top: 130px;
+    left:140px;
+}
+
+.containerSubtitle{
+    z-index: 2;
+    height: 25vh;
+    position: absolute;
+    width: 75vh;
+    top: 285px;
+    left:140px; 
+}
+
+.paragraph{
+    font-family: MontserratMediumItalic;
+
+}
+
+
