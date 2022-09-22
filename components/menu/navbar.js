@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography,Grid, IconButton } from "@mui/material";
-import styles from '../../../styles/Navbar.module.css'
+import styles from '../../styles/Navbar.module.css'
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Navbar = (props)=>{

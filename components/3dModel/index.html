@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://res.cloudinary.com/dlhdg8qoy/raw/upload/v1663818144/portafolio/three.min.js"></script>
+    <script>
+
+    let camera;
+    let scene;
+    let render;
+    let geometric;
+    let material; 
+    let mesh;
+
+
+    function initialize(){
+     
+    //THREE js 
+    "data/Group_.svg"
+    //camera parameters (FOV,width height,minDistance,maxDistance)
+     camera=new THREE.PerspectiveCamera(100,window.innerWidth/innerHeight,1,1500)
+     //camera position(x,y,z)
+     camera.position.set(0,0,300)
+     //scene 
+     scene=new THREE.Scene()
+     //adding the scene
+     scene.add(camera)
+
+     //Geometric
+     //Icosaedro parametros(radio,detalle)
+     geometric = new THREE.TorusKnotGeometry(
+       
+        radius =100,
+        tubeWidth=30,
+        radialSegments=100,
+        tubularSegements=5,
+        detail=2,
+       
+       
+     )
+    // geometric=new THREE.IcosahedronGeometry(200,1)
+     //Material 
+     //mesh type  
+     //MeshNormalMaterial() its more colorfull and realistic
+     material=new THREE.MeshNormalMaterial({
+         color:'white',
+         wireframe:true,
+         wireframeLinewidth:100,    
+     })
+
+     //mesh call (geometric,material)
+      mesh=new THREE.Mesh(geometric,material)
+      //adding mesh to scene
+      scene.add(mesh)
+      //render  
+      //WebGL
+      render=new THREE.WebGLRenderer()
+      //render color (color,alfa)
+      render.setClearColor('transparent',1)
+      //render size 
+      
+      render.setSize(window.innerWidth,window.innerHeight)
+      //adding the render to the body  
+      document.body.appendChild(render.domElement)
+       
+
+    }
+
+    initialize()
+
+    //animating the render 
+
+    function animating(){
+        requestAnimationFrame(animating)
+
+        mesh.rotation.x+=0.012
+        mesh.rotation.y+=0.012
+
+        render.render(scene,camera)
+    
+    }
+    
+    animating()
+       
+    
+    
+    </script>
+
+
+
+    
+</body>
+</html>
