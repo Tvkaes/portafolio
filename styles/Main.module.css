@@ -5,7 +5,6 @@
 }
 
 .title{
-   
     position: absolute;
     font-family: MontserratBold;
     opacity: .6;
@@ -22,16 +21,17 @@
     background: -webkit-linear-gradient(#d4af37, #F00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
+    top: -1vw;
 
 }
 
 .containerTitle{
-    height: 25vh;
+    height: 25vw;
     position: absolute;
     width: 55vw;
     z-index: 1;
-    top: 11vw;
-    left:13vw;
+    top: 15vw;
+    left:10vw;
 }
 
 .containerSubtitle{
