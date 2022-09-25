@@ -36,7 +36,7 @@ ElevationScroll.propTypes = {
 };
 
 const drawerWidth  = 240;
-const navItems =['Home','About','Skill','Contact',<GitHubIcon key={4}/>]
+const navItems =['Home','About','Skill','Contact',<GitHubIcon key={'github'}/>]
 
 
 const Navbar = (props)=>{
@@ -57,7 +57,7 @@ const Navbar = (props)=>{
           <ListItem key={item}>
             <ListItemButton sx={{ textAlign: 'center',fontFamily:'MontserratMedium' }} >
               <ListItemText>
-                <Typography style={{fontFamily:'MontserratMedium'}} variant={'body1'} gutterBottom>{item}</Typography>
+                <Typography style={{fontFamily:'MontserratMedium',textTransform:'none'}} variant={'body1'} gutterBottom>{item}</Typography>
               </ListItemText>
             </ListItemButton>
           </ListItem>
@@ -83,7 +83,7 @@ const Navbar = (props)=>{
           >
             <MenuIcon style={{color:'black'}} />
           </IconButton>
-          {isMobile ? <Typography>Hola</Typography>: 'Adios'}
+          {isMobile ? <Typography style={{color:'black',fontFamily:'MontserratBold'}} variant={'body2'} >Logo</Typography>: null}
           <Typography
             variant="h6"
             component="div"
@@ -94,7 +94,7 @@ const Navbar = (props)=>{
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff',fontFamily:'MontserratMedium' }}>
-                <Typography variant="body1" style={{fontFamily:'MontserratMedium',color:'black'}}>
+                <Typography variant="body1" style={{fontFamily:'MontserratMedium',color:'black',textTransform:'none'}}>
                 {item}
                 </Typography> 
               </Button>
