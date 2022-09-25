@@ -4,6 +4,7 @@ import Navbar from "../components/menu/navbar";
 import Wave from "react-wavify";
 import styles from "../styles/Main.module.css"
 import Index from "../components/3dModel/index";
+import HomeContent from "../components/content/HomeContent";
 
 
 
@@ -12,12 +13,9 @@ import Index from "../components/3dModel/index";
 const Home = ()=>{
     return(
         <div style={{backgroundColor:'white',width:'100%',height:'100vh'}}>
-            <div style={{width:'100%',height:'63vh',backgroundColor:"white"}}>
+            <div style={{width:'100%',height:'100vh'}}>
 
-               <div className={styles.containerTitle}>
-               <Typography variant="h3" className={styles.title}>I want to be a fullstack developer</Typography>
-               <Typography variant="subtitle2" className={styles.upSubtitle} >Hey, I&#39;M Jonathan</Typography>
-               </div>
+              <HomeContent></HomeContent>
                {/* <div className={styles.containerSubtitle}>
                 <Typography className={styles.paragraph} variant='bodyw'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sollicitudin non mi in porta. Ut lorem odio, mattis eu tristique id, hendrerit eu ex.</Typography>
                </div> */}
