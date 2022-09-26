@@ -1,6 +1,7 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
+import { Model } from '../../public/Jelly'
 
 
 
@@ -15,12 +16,11 @@ function Torus(){
 
 export default function Index(){
     return(
-        <Canvas style={{height:'90vh',width:'90vh',position:'absolute',left:'50vw',top:'-5vw',zIndex:3}}>
+        <Canvas style={{height:'100vh',width:'100vh'}}>
             <OrbitControls></OrbitControls>
-            <Stars></Stars>
             <ambientLight intensity={.5}></ambientLight>
             <spotLight postion={[10,15,10]}/>
-            <Torus></Torus>
+            <Model></Model>
         </Canvas>
     )
 }
