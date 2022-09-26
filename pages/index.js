@@ -12,8 +12,8 @@ import HomeContent from "../components/content/HomeContent";
 
 const Home = ()=>{
     return(
-        <div style={{backgroundColor:'white',width:'100%',height:'100vh'}}>
-            <div style={{width:'100%',height:'100vh'}}>
+        <div style={{width:'100%',height:'100vh'}}>
+           
 
               <HomeContent></HomeContent>
                {/* <div className={styles.containerSubtitle}>
@@ -36,7 +36,7 @@ const Home = ()=>{
                         </linearGradient>
                     </defs>
                 </Wave> */}
-            </div>
+            
         </div>
     )
 }

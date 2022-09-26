@@ -49,15 +49,15 @@ const Navbar = (props)=>{
   }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{textAlign:'center'}}>
-      <Typography variant="h6" style={{fontFamily:'MontserratRegular',color:'black',padding:15}} gutterBottom>Logo</Typography>
+    <Box onClick={handleDrawerToggle} sx={{textAlign:'center',backgroundColor:'#1A1A1A'}}>
+      <Typography variant="h6" style={{fontFamily:'MontserratRegular',color:'#fcfcfd',padding:15}} gutterBottom>Logo</Typography>
       <Divider/>
       <List>
         {navItems.map((item)=>(
           <ListItem key={item}>
             <ListItemButton sx={{ textAlign: 'center',fontFamily:'MontserratMedium' }} >
               <ListItemText>
-                <Typography style={{fontFamily:'MontserratMedium',textTransform:'none'}} variant={'body1'} gutterBottom>{item}</Typography>
+                <Typography style={{fontFamily:'MontserratMedium',textTransform:'none' ,color:'#fcfcfd'}} variant={'body1'} gutterBottom>{item}</Typography>
               </ListItemText>
             </ListItemButton>
           </ListItem>
@@ -72,7 +72,7 @@ const Navbar = (props)=>{
    <div>
      <Box sx={{ display: 'flex' }}>
      <ElevationScroll {...props}>
-      <AppBar component="nav" style={{backgroundColor:'white'}}>
+      <AppBar component="nav" style={{backgroundColor:'#1A1A1A'}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -81,20 +81,20 @@ const Navbar = (props)=>{
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-            <MenuIcon style={{color:'black'}} />
+            <MenuIcon style={{color:'white'}} />
           </IconButton>
-          {isMobile ? <Typography style={{color:'black',fontFamily:'MontserratBold'}} variant={'body2'} >Logo</Typography>: null}
+          {isMobile ? <Typography style={{color:'#fcfcfd',fontFamily:'MontserratBold'}} variant={'body2'} >Logo</Typography>: null}
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } ,fontFamily:'MontserratBold',color:'black'}}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } ,fontFamily:'MontserratBold',color:'#fcfcfd'}}
           >
             Logo
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'block' }}}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: '#fff',fontFamily:'MontserratMedium' }}>
-                <Typography variant="body1" style={{fontFamily:'MontserratMedium',color:'black',textTransform:'none'}}>
+                <Typography variant="body1" style={{fontFamily:'MontserratMedium',color:'#fcfcfd',textTransform:'none'}}>
                 {item}
                 </Typography> 
               </Button>
@@ -103,27 +103,34 @@ const Navbar = (props)=>{
         </Toolbar>
       </AppBar>
       </ElevationScroll>
-      <Box component="nav">
+      <Box component="nav" >
         <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+          PaperProps={{
+            style:{background:'#1A1A1A'}
           }}
+          ModalProps={{
+            keepMounted: true,
+            // Better open performance on mobile.
+          }}
+         
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth }
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            
+            
           }}
         >
           {drawer}
          
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <div style={{padding:3}}>
         {props.children}
-      </Box>
+      </div>
     </Box>
   </div>
     )

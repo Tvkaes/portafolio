@@ -5,33 +5,39 @@
 }
 
 .title{
-    position: absolute;
+    
     font-family: MontserratBold;
-    opacity: .6;
-    background: -webkit-linear-gradient(#d4af37, #F00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   
+    
+    color: #fcfcfd;
+      
 }
 
 .upSubtitle{
    
-    position: absolute;
+   
     font-family: MontserratBold;
-    opacity: .6;
-    background: -webkit-linear-gradient(#d4af37, #F00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    top: -1vw;
+    color: #fcfcfd;
+   
 
 }
 
 .containerTitle{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
     height: 25vw;
     position: absolute;
     width: 55vw;
     z-index: 1;
     top: 15vw;
     left:10vw;
+/* From https://css.glass */
+/* background: rgba(26, 26, 26, 0.32);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px); */
+    
 }
 
 .containerSubtitle{
